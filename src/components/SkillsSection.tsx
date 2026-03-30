@@ -61,7 +61,7 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="group rounded-xl bg-card border border-border p-6 hover:border-primary/30 transition-all duration-300"
+              className="rounded-xl bg-card border border-border p-6"
             >
               <skill.icon className="w-5 h-5 text-primary mb-4" />
               <h3 className="font-heading text-lg font-semibold mb-3">{skill.title}</h3>
