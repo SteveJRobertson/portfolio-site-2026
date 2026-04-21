@@ -27,54 +27,6 @@ const projects: Project[] = [
     github: "https://github.com/SteveJRobertson/lighthouse-compare",
     status: "in-progress",
   },
-  {
-    name: "Pomodoro Timer",
-    description:
-      "A clean pomodoro timer built with React and TypeScript to boost focus and productivity.",
-    tech: ["React", "TypeScript"],
-    github: "https://github.com/SteveJRobertson/pomodoro-timer",
-    status: "live",
-  },
-  {
-    name: "iPod Rescue",
-    description:
-      "A Node.js program that recovers music files from an iPod, extracting metadata and organising tracks.",
-    tech: ["TypeScript", "Node.js"],
-    github: "https://github.com/SteveJRobertson/ipod-rescue",
-    status: "live",
-  },
-  {
-    name: "Pomodoro App",
-    description:
-      "A native macOS pomodoro application built with React, TypeScript, and Electron.",
-    tech: ["React", "TypeScript", "Electron"],
-    github: "https://github.com/SteveJRobertson/pomodoro-app",
-    status: "live",
-  },
-  {
-    name: "Three.js Solar System",
-    description:
-      "An interactive 3D solar system rendered with Three.js — a fun exploration of WebGL and 3D graphics.",
-    tech: ["JavaScript", "Three.js"],
-    github: "https://github.com/SteveJRobertson/threejs-solar-system",
-    status: "live",
-  },
-  {
-    name: "React Yahtzee",
-    description:
-      "The classic dice game built as a Progressive Web App in React.",
-    tech: ["React", "PWA"],
-    github: "https://github.com/SteveJRobertson/react-yahtzee",
-    status: "live",
-  },
-  {
-    name: "Movie Search",
-    description:
-      "A movie search application built with TypeScript.",
-    tech: ["TypeScript"],
-    github: "https://github.com/SteveJRobertson/movie-search",
-    status: "in-progress",
-  },
 ];
 
 const ProjectsSection = () => {
@@ -92,7 +44,8 @@ const ProjectsSection = () => {
             Personal <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            Side projects and experiments — some polished, some still taking shape.
+            Side projects and experiments — some polished, some still taking
+            shape.
           </p>
         </motion.div>
 
@@ -107,7 +60,9 @@ const ProjectsSection = () => {
               className="rounded-xl bg-card border border-border p-6 flex flex-col"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
-                <h3 className="font-heading text-lg font-bold">{project.name}</h3>
+                <h3 className="font-heading text-lg font-bold">
+                  {project.name}
+                </h3>
                 <span
                   className={`shrink-0 text-xs font-medium px-2.5 py-1 rounded-full ${
                     project.status === "live"
@@ -115,7 +70,9 @@ const ProjectsSection = () => {
                       : "bg-muted text-muted-foreground"
                   }`}
                 >
-                  {project.status === "live" ? "Live" : (
+                  {project.status === "live" ? (
+                    "Live"
+                  ) : (
                     <span className="flex items-center gap-1">
                       <Construction className="w-3 h-3" />
                       In progress

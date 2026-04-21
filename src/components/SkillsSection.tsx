@@ -5,12 +5,25 @@ const skills = [
   {
     icon: Code2,
     title: "Frontend Engineering",
-    items: ["React", "TypeScript", "JavaScript", "Redux", "React Router", "HTML", "CSS", "Sass"],
+    items: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Redux",
+      "React Router",
+      "HTML",
+      "CSS",
+    ],
   },
   {
     icon: Layers,
     title: "Design Systems",
-    items: ["Component libraries", "Design tokens", "Accessibility", "Documentation", "Cross-team adoption"],
+    items: [
+      "Component libraries",
+      "Design tokens",
+      "Accessibility",
+      "Documentation",
+    ],
   },
   {
     icon: Terminal,
@@ -20,17 +33,22 @@ const skills = [
   {
     icon: Figma,
     title: "Design & Collaboration",
-    items: ["Figma", "System architecture", "Stakeholder engagement", "Technical docs"],
+    items: [
+      "Figma",
+      "System architecture",
+      "Stakeholder engagement",
+      "Technical docs",
+    ],
   },
   {
     icon: GitBranch,
     title: "Practices",
-    items: ["Agile / Scrum", "TDD", "Code review culture", "AI-assisted workflows"],
+    items: ["Agile / Scrum", "TDD", "AI-assisted workflows"],
   },
   {
     icon: Users,
     title: "Leadership",
-    items: ["Mentoring", "Developer enablement", "Knowledge sharing", "Migration strategy"],
+    items: ["Mentoring", "Developer enablement", "Knowledge sharing"],
   },
 ];
 
@@ -49,7 +67,8 @@ const SkillsSection = () => {
             What I <span className="text-gradient">do</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            I thrive where frontend engineering intersects with design, platform teams, and business stakeholders.
+            I thrive where frontend engineering intersects with design, platform
+            teams, and business stakeholders.
           </p>
         </motion.div>
 
@@ -64,7 +83,9 @@ const SkillsSection = () => {
               className="rounded-xl bg-card border border-border p-6"
             >
               <skill.icon className="w-5 h-5 text-primary mb-4" />
-              <h3 className="font-heading text-lg font-semibold mb-3">{skill.title}</h3>
+              <h3 className="font-heading text-lg font-semibold mb-3">
+                {skill.title}
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {skill.items.map((item) => (
                   <span
