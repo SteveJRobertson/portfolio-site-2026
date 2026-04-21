@@ -5,7 +5,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 const socialLinks = [
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/steve-robertson-5425501a/",
+    href: "http://linkedin.com/in/steverobertson80",
     label: "LinkedIn",
   },
   { icon: Github, href: "https://github.com/stevejrobertson", label: "GitHub" },

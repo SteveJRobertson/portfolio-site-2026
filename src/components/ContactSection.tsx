@@ -16,7 +16,8 @@ const ContactSection = () => {
             Get in <span className="text-gradient">touch</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10">
-            I'm always open to discussing new projects, creative ideas, or opportunities.
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -28,7 +29,7 @@ const ContactSection = () => {
               Say hello
             </a>
             <a
-              href="https://www.linkedin.com/in/steve-robertson-5425501a/"
+              href="http://linkedin.com/in/steverobertson80"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-heading font-semibold hover:bg-secondary/80 transition-colors"
@@ -42,7 +43,12 @@ const ContactSection = () => {
             <span className="flex items-center gap-1.5">
               <MapPin className="w-4 h-4" /> Edinburgh, UK
             </span>
-            <a href="https://github.com/stevejrobertson" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+            <a
+              href="https://github.com/stevejrobertson"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-primary transition-colors"
+            >
               <Github className="w-4 h-4" /> stevejrobertson
             </a>
           </div>
