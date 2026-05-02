@@ -5,17 +5,33 @@ const experiences = [
     company: "FanDuel",
     role: "Senior Software Engineer",
     period: "Jan 2025 – Present",
-    description:
-      "Senior engineer within Customer Platform Engineering, working across flagship customer-facing web applications in React and TypeScript. Led design system migration, contributed to React Router migration, and co-delivered a Salesforce chat integration ahead of schedule.",
-    highlights: ["Design System Migration", "React Router Migration", "AWS Infrastructure", "AI Exploration"],
+    description: `<ul>
+  <li>Orchestrated large-scale migrations, including the adoption of company-wide design systems and routing infrastructures for high-traffic web applications.</li>
+  <li>Conducted root-cause analyses for complex regressions and pivoted migration strategies to resolve reviewer bottlenecks, directly improving team velocity.</li>
+  <li>Managed deployment for new product domains using AWS (Route 53, S3, CloudFront) to ensure dedicated, stable staging environments.</li>
+</ul>`,
+    highlights: [
+      "Design System Migration",
+      "React Router Migration",
+      "AWS Infrastructure",
+      "AI Exploration",
+    ],
   },
   {
     company: "Wood Mackenzie",
-    role: "UI Engineer / Design System Lead",
+    role: "Design System Lead (Contract)",
     period: "Dec 2019 – Nov 2024",
-    description:
-      "Hired to build a React and TypeScript UI component library, quickly moving into a lead role as the primary point of contact for the design system across the organisation. Built CI/CD pipelines, established coding standards, and mentored engineers.",
-    highlights: ["Component Library", "CI/CD Pipeline", "Team Mentorship", "Cross-team Adoption"],
+    description: `<ul>
+  <li>Established a unified React and TypeScript UI component library to consolidate fragmented frontend architectures across the global business.</li>
+  <li>Acted as the primary organizational bridge between UX, Product, and Engineering, driving adoption through comprehensive self-service documentation and a robust CI/CD pipeline.</li>
+  <li>Successfully transitioned the library to full internal maintenance after onboarding and mentoring 10+ engineering teams on contribution guidelines and accessibility standards.</li>
+</ul>`,
+    highlights: [
+      "Component Library",
+      "CI/CD Pipeline",
+      "Team Mentorship",
+      "Cross-team Adoption",
+    ],
   },
   {
     company: "Royal Bank of Scotland",
@@ -66,7 +82,8 @@ const ExperienceSection = () => {
             Experience
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            A track record of leading frontend initiatives across financial services, energy, and sports technology.
+            A track record of leading frontend initiatives across financial
+            services, energy, and sports technology.
           </p>
         </motion.div>
 
@@ -90,17 +107,28 @@ const ExperienceSection = () => {
                 <div className="rounded-xl bg-card border border-border p-6 md:p-8 hover:border-primary/20 transition-colors duration-300">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="font-heading text-xl font-bold">{exp.company}</h3>
-                      <p className="text-primary text-sm font-medium">{exp.role}</p>
+                      <h3 className="font-heading text-xl font-bold">
+                        {exp.company}
+                      </h3>
+                      <p className="text-primary text-sm font-medium">
+                        {exp.role}
+                      </p>
                     </div>
-                    <span className="text-muted-foreground text-sm shrink-0">{exp.period}</span>
+                    <span className="text-muted-foreground text-sm shrink-0">
+                      {exp.period}
+                    </span>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{exp.description}</p>
+                  <div
+                    className="text-muted-foreground text-sm leading-relaxed mb-4 [&_strong]:font-bold [&_strong]:text-foreground [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2"
+                    dangerouslySetInnerHTML={{ __html: exp.description }}
+                  />
                   <div className="flex flex-wrap gap-2">
                     {exp.highlights.map((h) => (
-                      <span key={h} className="text-xs px-2.5 py-1 rounded-md bg-primary/10 text-primary font-medium">
-                        {h}
-                      </span>
+                      <span
+                        key={h}
+                        className="text-xs px-2.5 py-1 rounded-md bg-primary/10 text-primary font-medium"
+                        dangerouslySetInnerHTML={{ __html: h }}
+                      />
                     ))}
                   </div>
                 </div>
